@@ -2,6 +2,8 @@
 *.json
 data/
 *.csv
+logs/
+.log
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
