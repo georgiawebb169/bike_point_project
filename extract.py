@@ -9,7 +9,7 @@ timestamp = datetime.now().strftime('%Y-%m-%d %H-%M-%S')
 
 log_dir = 'logs'
 os.makedirs(log_dir,exist_ok=True)
-log_filename=f'{log_dir}/{timestamp}.log'
+log_filename=f'{log_dir}/load_{timestamp}.log'
 
 logging.basicConfig(
         filename=log_filename,
