@@ -1,3 +1,18 @@
+# ==============================================================================
+# AUTOMATED SCHEDULE SETUP (GitHub Actions)
+# ==============================================================================
+# How this runs every 15 minutes automatically:
+# 1. Location: Because this file is saved inside '.github/workflows/', GitHub 
+#    automatically detects it and activates the cron schedule on the main branch.
+# 2. Secrets: Since '.env' is ignored by Git, the three AWS secrets referenced 
+#    in thec main script had to be manually saved in GitHub under:
+#    Settings -> Environments -> "Bike Point DES 7" (or Repository Secrets).
+# 3. Manual Trigger: 'workflow_dispatch' adds a "Run workflow" button inside 
+#    the GitHub Actions tab so we can test it anytime without waiting 15 mins.
+# 4. Note: GitHub pauses scheduled workflows if a public repo has no commits 
+#    for 60 days—re-enable it in the Actions tab if it ever stops.
+# ==============================================================================
+
 name: Bike Point Ingestion
 
 on:
