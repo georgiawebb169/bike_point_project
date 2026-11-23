@@ -1,5 +1,7 @@
 # bike_point_project
 
+I have created an automated extract and load pipeline, which every 15 minutes checks the status of Santander Cycles in London, saves a snapshot of the data and stores it in cloud storage. 
+
 This python script extracts data from Transport For London's (TFL) bike point API. The TFL BikePoint API provides real-time information about London's Santander Cycles docking stations (often called "Boris Bikes").
 
 How it works:
@@ -20,3 +22,5 @@ Client Error (4xx): Stops immediately, tells end user to fix something, and logs
 │ └── 2026-07-08 16-43-22.json # Live BikePoint snapshot
 └── logs/
 └── 2026-07-08 16-43-22.log # Detailed execution audit trail
+
+The github work flow schedules the python script to run every 15 minutes. 
